@@ -18,12 +18,10 @@ with open(path_conf_json, 'r') as config_file:
 # List of all subject to collect
 list_subject = config["twitter_token"].keys()
 
-# Collect tweet  subject
-#for subject in ["arthaud","hidalgo","lepen","macron","melenchon"]:
+# Collect tweets subject
 for subject in list_subject:
     try:
         make_request.request_parameters(subject, start_date, end_date)
     except:
         print(subject)
 
-#reversed
