@@ -1,0 +1,18 @@
+{
+  "twitter_token": {
+    "subject_1": {
+      "consumer_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "consumer_secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "access_token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "access_token_secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "q": "#hashtag_to_follow OR @identification_to_follow lang:fr "
+    },
+    "subject_2": {
+      "consumer_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "consumer_secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "access_token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "access_token_secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "q": "#hashtag_to_follow OR @identification_to_follow lang:fr "
+    }
+  }
+}
