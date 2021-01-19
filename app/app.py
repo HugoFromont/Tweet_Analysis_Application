@@ -64,18 +64,18 @@ app.layout = html.Div(
                 html.H2("Candidats", className="selecteur_menu"),
                 dcc.Dropdown(id='select_city',
                                  options=[
-                                     {'label': "aignan", 'value': "aignan"},
-                                     {'label': "arthaud", 'value': "arthaud"},
-                                     {'label': "asselineau", 'value': "asselineau"},
-                                     {'label': "bertrand", 'value': "bertrand"},
-                                     {'label': "hidalgo", 'value': "hidalgo"},
-                                     {'label': "jadot", 'value': "jadot"},
-                                     {'label': "lepen", 'value': "lepen"},
-                                     {'label': "macron", 'value': "macron"},
-                                     {'label': "melenchon", 'value': "melenchon"},
-                                     {'label': "pecresse", 'value': "pecresse"},
-                                     {'label': "poutou", 'value': "poutou"},
-                                     {'label': "rousel", 'value': "rousel"}],value='aignan'),
+                                     {'label': "ND-Aignan", 'value': "aignan"},
+                                     {'label': "N-Arthaud", 'value': "arthaud"},
+                                     {'label': "F-Asselineau", 'value': "asselineau"},
+                                     {'label': "X-Bertrand", 'value': "bertrand"},
+                                     {'label': "A-Hidalgo", 'value': "hidalgo"},
+                                     {'label': "Y-Jadot", 'value': "jadot"},
+                                     {'label': "M-Lepen", 'value': "lepen"},
+                                     {'label': "E-Macron", 'value': "macron"},
+                                     {'label': "JL-Melenchon", 'value': "melenchon"},
+                                     {'label': "V-Pecresse", 'value': "pecresse"},
+                                     {'label': "P-Poutou", 'value': "poutou"},
+                                     {'label': "F-Roussel", 'value': "roussel"}],value='aignan'),
                 html.H2("Plage de dates", className="selecteur_menu"),
                 dcc.DatePickerRange(
                         id='date_selection',
@@ -299,10 +299,13 @@ def apply_date_filter(select_city,start_date,end_date):
     nb_tweets_moyen = round(df.shape[0] / (df.created_at.max() - df.created_at.min()).days)
 
     #Note de satisfaction
-    note_satisfaction = str(round((df.note_sentiment.mean() + 100)/2)), "/100"
+    note_satisfaction = str(round((df.note_sentiment.mean() + 100)/2)) + "/100"
+    note_satisfaction = str(round((df[df.sentiment == "positive"].shape[0]*100 + df[df.sentiment == "neutral"].shape[0]*50)/df.shape[0])) + "/100"
+
+
     #Taux de tweets positif
-    tx_tweet_positif = str(round(df[df.sentiment == "positif"].shape[0]/df.shape[0]*100)) + "%"
-    tx_tweet_negatif = str(round(df[df.sentiment == "negatif"].shape[0]/df.shape[0]*100)) + "%"
+    tx_tweet_positif = str(round(df[df.sentiment == "positive"].shape[0]/df.shape[0]*100)) + "%"
+    tx_tweet_negatif = str(round(df[df.sentiment == "neutral"].shape[0]/df.shape[0]*100)) + "%"
 
     test = pd.to_datetime(df.created_at)
     test = test.groupby(test.dt.floor('1H')).count()
