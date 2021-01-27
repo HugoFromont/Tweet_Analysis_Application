@@ -299,7 +299,7 @@ def apply_date_filter(select_city,start_date,end_date):
     nb_tweets_moyen = round(df.shape[0] / (df.created_at.max() - df.created_at.min()).days)
 
     #Note de satisfaction
-    note_satisfaction = str(round((df.note_sentiment.mean() + 100)/2)) + "/100"
+    #note_satisfaction = str(round((df.note_sentiment.mean() + 100)/2)) + "/100"
     note_satisfaction = str(round((df[df.sentiment == "positive"].shape[0]*100 + df[df.sentiment == "neutral"].shape[0]*50)/df.shape[0])) + "/100"
 
 
@@ -440,9 +440,9 @@ def analyse_topic(coord_word,taux_tweet_sentiment,selecteur_topic):
 
     nb_total = taux_tweet_sentiment[taux_tweet_sentiment.topic == selecteur_topic].note_sentiment.sum()
     nb_positif = taux_tweet_sentiment[
-        (taux_tweet_sentiment.topic == selecteur_topic) & (taux_tweet_sentiment.sentiment == "positif")].note_sentiment.sum()
+        (taux_tweet_sentiment.topic == selecteur_topic) & (taux_tweet_sentiment.sentiment == "positive")].note_sentiment.sum()
     nb_negatif = taux_tweet_sentiment[
-        (taux_tweet_sentiment.topic == selecteur_topic) & (taux_tweet_sentiment.sentiment == "negatif")].note_sentiment.sum()
+        (taux_tweet_sentiment.topic == selecteur_topic) & (taux_tweet_sentiment.sentiment == "negative")].note_sentiment.sum()
     tx_tweet_topic_positif = str(round((nb_positif / nb_total) * 100)) + "%"
     tx_tweet_topic_negatif = str(round((nb_negatif / nb_total) * 100)) + "%"
     note_topic = str(round((nb_positif * 100 + (nb_total - nb_positif - nb_negatif) * 50) / nb_total)) + "/100"
