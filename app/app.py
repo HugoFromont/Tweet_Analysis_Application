@@ -106,7 +106,7 @@ app.layout = html.Div(
                                 html.Div(
                                     className="analyse_infobox",
                                     children=[
-                                        html.Div([html.Img(className="image_infobox", src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png")],className="infobox_image_div"),
+                                        html.Div([html.Img(className="image_infobox", src="https://github.com/HugoFromont/Tweet_Analysis_Application/blob/dev/app/img/twitter_logo.png?raw=true")],className="infobox_image_div"),
                                         html.Div([
                                             html.P("NOMBRE DE TWEETS", className="text_infobox"),
                                             html.P(id="nb_tweet", children=["..."], className="text_infobox")
@@ -116,7 +116,7 @@ app.layout = html.Div(
                                 html.Div(
                                     className="analyse_infobox",
                                     children=[
-                                        html.Div([html.Img(className="image_infobox", src="https://cdn3.iconfinder.com/data/icons/glypho-free/64/performance-clock-speed-512.png")],className="infobox_image_div"),
+                                        html.Div([html.Img(className="image_infobox", src="https://github.com/HugoFromont/Tweet_Analysis_Application/blob/dev/app/img/perf.png?raw=true")],className="infobox_image_div"),
                                         html.Div([
                                             html.P("NB TWEETS PAR JOUR", className="text_infobox"),
                                             html.P(id="nb_tweet_moyen", children=["..."], className="text_infobox")
@@ -126,7 +126,7 @@ app.layout = html.Div(
                                 html.Div(
                                     className="analyse_infobox",
                                     children=[
-                                        html.Div([html.Img(className="image_infobox", src="https://www.icone-png.com/png/45/44907.png")],className="infobox_image_div"),
+                                        html.Div([html.Img(className="image_infobox", src="https://github.com/HugoFromont/Tweet_Analysis_Application/blob/dev/app/img/best_day.png?raw=true")],className="infobox_image_div"),
                                         html.Div([
                                             html.P("DATE RECORD", className="text_infobox"),
                                             html.P(id="max_date", children=["..."], className="text_infobox")
@@ -153,7 +153,7 @@ app.layout = html.Div(
                                 html.Div(
                                     className="analyse_infobox",
                                     children=[
-                                        html.Div([html.Img(className="image_infobox", src="https://image.flaticon.com/icons/png/512/20/20664.png")],className="infobox_image_div"),
+                                        html.Div([html.Img(className="image_infobox", src="https://github.com/HugoFromont/Tweet_Analysis_Application/blob/dev/app/img/popularity.png?raw=true")],className="infobox_image_div"),
                                         html.Div([
                                             html.P("NOTE DE POPULARITE", className="text_infobox"),
                                             html.P(id = 'note_satisfaction', children=["..."], className="text_infobox")
@@ -163,7 +163,7 @@ app.layout = html.Div(
                                 html.Div(
                                     className="analyse_infobox",
                                     children=[
-                                        html.Div([html.Img(className="image_infobox", src="https://static.thenounproject.com/png/6830-200.png")],className="infobox_image_div"),
+                                        html.Div([html.Img(className="image_infobox", src="https://github.com/HugoFromont/Tweet_Analysis_Application/blob/dev/app/img/positive.png?raw=true")],className="infobox_image_div"),
                                         html.Div([
                                             html.P("TAUX DE TWEETS POSITIFS", className="text_infobox"),
                                             html.P(id='tx_tweet_positif', children=["..."], className="text_infobox")
@@ -173,7 +173,7 @@ app.layout = html.Div(
                                 html.Div(
                                     className="analyse_infobox",
                                     children=[
-                                        html.Div([html.Img(className="image_infobox", src="https://image.flaticon.com/icons/png/128/334/334047.png")],className="infobox_image_div"),
+                                        html.Div([html.Img(className="image_infobox", src="https://github.com/HugoFromont/Tweet_Analysis_Application/blob/dev/app/img/negative.png?raw=true")],className="infobox_image_div"),
                                         html.Div([
                                             html.P("TAUX DE TWEETS NEGATIFS", className="text_infobox"),
                                             html.P(id='tx_tweet_negatif', children=["..."], className="text_infobox")
@@ -221,7 +221,7 @@ app.layout = html.Div(
                                 html.Div(
                                     className="analyse_infobox",
                                     children=[
-                                        html.Div([html.Img(className="image_infobox", src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png")],className="infobox_image_div"),
+                                        html.Div([html.Img(className="image_infobox", src="https://github.com/HugoFromont/Tweet_Analysis_Application/blob/dev/app/img/popularity.png?raw=true")],className="infobox_image_div"),
                                         html.Div([
                                             html.P("NOTE DE SATISFACTION", className="text_infobox"),
                                             html.P(id='note_topic',children=["..."], className="text_infobox")
@@ -232,7 +232,7 @@ app.layout = html.Div(
                                 html.Div(
                                     className="analyse_infobox",
                                     children=[
-                                        html.Div([html.Img(className="image_infobox", src="https://cdn3.iconfinder.com/data/icons/glypho-free/64/performance-clock-speed-512.png")],className="infobox_image_div"),
+                                        html.Div([html.Img(className="image_infobox", src="https://github.com/HugoFromont/Tweet_Analysis_Application/blob/dev/app/img/positive.png?raw=true")],className="infobox_image_div"),
                                         html.Div([
                                             html.P("TAUX DE TWEETS POSITIFS", className="text_infobox"),
                                             html.P(id="tx_tweet_topic_positif",children=["..."], className="text_infobox")
@@ -242,7 +242,7 @@ app.layout = html.Div(
                                 html.Div(
                                     className="analyse_infobox",
                                     children=[
-                                        html.Div([html.Img(className="image_infobox", src="https://www.icone-png.com/png/45/44907.png")],className="infobox_image_div"),
+                                        html.Div([html.Img(className="image_infobox", src="https://github.com/HugoFromont/Tweet_Analysis_Application/blob/dev/app/img/negative.png?raw=true")],className="infobox_image_div"),
                                         html.Div([
                                             html.P("TAUX DE TWEETS NEGATIFS", className="text_infobox"),
                                             html.P(id="tx_tweet_topic_negatif",children=["..."], className="text_infobox")
