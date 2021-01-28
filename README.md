@@ -49,3 +49,4 @@ To launch the dash app, you just need to run :
 python app\app.py
 ```
 
+![demo](demo.gif)
