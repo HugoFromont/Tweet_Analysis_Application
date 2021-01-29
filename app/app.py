@@ -299,7 +299,7 @@ def apply_date_filter(select_city,start_date,end_date):
     nb_tweets_moyen = round(df.shape[0] / (df.created_at.max() - df.created_at.min()).days)
 
     #Note de satisfaction
-    note_satisfaction = str(round((df.note_sentiment.mean() + 100)/2)) + "/100"
+    #note_satisfaction = str(round((df.note_sentiment.mean() + 100)/2)) + "/100"
     note_satisfaction = str(round((df[df.sentiment == "positive"].shape[0]*100 + df[df.sentiment == "neutral"].shape[0]*50)/df.shape[0])) + "/100"
 
 
